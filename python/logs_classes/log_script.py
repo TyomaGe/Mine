@@ -219,7 +219,8 @@ class LogAnalyzer:
                 most_active_client_day = self.__most_active_client_by_day(data)
                 print("Most Active Client by Day:")
                 print(
-                    f"{most_active_client_day[0]} on {most_active_client_day[2]} "
+                    f"{most_active_client_day[0]} on "
+                    f"{most_active_client_day[2]} "
                     f": {most_active_client_day[1]}")
                 print()
 
@@ -239,5 +240,5 @@ if __name__ == "__main__":
 # python log_script.py example_1.log example_2.log --poppage --maclient
 
 # Все параметры
-# --mppage --maclient --spage --fpage 
+# --mppage --maclient --spage --fpage
 # --savgpage --popbrowser --poppage --maclientday
