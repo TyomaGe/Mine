@@ -210,11 +210,6 @@ class LogAnalyzer:
                 print("Most Popular Browser:")
                 print(f"{popular_browser[0]} : {popular_browser[1]}")
                 print()
-            if 'poppage' in self.__stats:
-                popular_page = self.__most_popular_page(data)
-                print("Most Popular Page:")
-                print(f"{popular_page[0]} : {popular_page[1]}")
-                print()
             if 'maclientday' in self.__stats:
                 most_active_client_day = self.__most_active_client_by_day(data)
                 print("Most Active Client by Day:")
@@ -229,6 +224,8 @@ def main():
     params = get_params()
     analyzer = LogAnalyzer(params['files'], params['stats'])
     analyzer.analyze()
+    print(type(analyzer.analyze))
+    print(type(get_params))
 
 
 if __name__ == "__main__":
@@ -237,8 +234,8 @@ if __name__ == "__main__":
 # Примеры ввода
 # python log_script.py example_1.log example_2.log --fpage
 # python log_script.py example_2.log --maclientday --savgpage
-# python log_script.py example_1.log example_2.log --poppage --maclient
+# python log_script.py example_1.log example_2.log --mppage --maclient
 
 # Все параметры
 # --mppage --maclient --spage --fpage
-# --savgpage --popbrowser --poppage --maclientday
+# --savgpage --popbrowser --maclientday
